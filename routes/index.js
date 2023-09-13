@@ -1,12 +1,12 @@
 const express = require('express');
-const apiRoute = require('./api');
+const apiRoute = require('./api/api');
 
 const router = express.Router();
 
 router.use('/api', apiRoute);
 
 router.get('/', (_, res) => {
-  res.redirect('/api/user');
+  res.redirect('/api/user/login');
 });
 
 module.exports = router;
