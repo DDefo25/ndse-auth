@@ -1,0 +1,9 @@
+<ul>
+    <li>ID: </li><%= user.id %>
+    <li>Username: </li><%= user.username %>
+    <li>Name: </li><%= user.displayName %>
+    <% if (user.email) { %>
+        <li>Email: </li><%= user.email %>
+    <% } %>
+</ul>
+<button><a href="logout">Выйти</a></button>

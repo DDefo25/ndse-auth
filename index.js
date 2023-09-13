@@ -1,11 +1,14 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const indexRoute = require('./routes/api/index');
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+
+const port = process.env.PORT || 8989;
+const app = express()
+
+app.set('view engine', 'ejs')
+
+app.use(indexRoute)
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`App listening on port ${port}`)
 })
